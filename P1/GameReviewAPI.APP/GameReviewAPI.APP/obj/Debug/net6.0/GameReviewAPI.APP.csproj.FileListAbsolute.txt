@@ -1,0 +1,15 @@
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\bin\Debug\net6.0\GameReviewAPI.APP.exe
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\bin\Debug\net6.0\GameReviewAPI.APP.deps.json
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\bin\Debug\net6.0\GameReviewAPI.APP.runtimeconfig.json
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\bin\Debug\net6.0\GameReviewAPI.APP.dll
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\bin\Debug\net6.0\GameReviewAPI.APP.pdb
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.csproj.AssemblyReference.cache
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.AssemblyInfoInputs.cache
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.AssemblyInfo.cs
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.csproj.CoreCompileInputs.cache
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.dll
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\refint\GameReviewAPI.APP.dll
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.pdb
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\GameReviewAPI.APP.genruntimeconfig.cache
+C:\Users\bsass\source\repos\GameReviewAPI.APP\GameReviewAPI.APP\obj\Debug\net6.0\ref\GameReviewAPI.APP.dll

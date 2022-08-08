@@ -1,0 +1,12 @@
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.deps.json
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.dll
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.pdb
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.csproj.AssemblyReference.cache
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.AssemblyInfoInputs.cache
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.AssemblyInfo.cs
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.csproj.CoreCompileInputs.cache
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.dll
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\refint\GameReviewAPI.Model.dll
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.pdb
+C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\ref\GameReviewAPI.Model.dll
