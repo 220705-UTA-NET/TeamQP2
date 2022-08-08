@@ -1,6 +1,6 @@
 CREATE SCHEMA Review
 GO
-
+DROP TABLE  Review.Game
 CREATE TABLE Review.Reviewer(
     ID INT PRIMARY KEY IDENTITY,
     UserID NVARCHAR(255) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE Review.Game(
     ID INT PRIMARY KEY IDENTITY,
     GameTitle NVARCHAR(255) NOT NULL,
     GameDeveloper NVARCHAR(255) NOT NULL,
-    GameGenre NVARCHAR(255) NOT NULL,
+    GamePublisher NVARCHAR(255) NOT NULL,
     YearPublished INT NOT NULL,
     CONSTRAINT game_values UNIQUE (GameTitle,GameDeveloper)
 )
@@ -25,5 +25,23 @@ CREATE TABLE Review.GameReview(
     -- foreign key reference back to reviewer
     ReviewDate DATETIME NOT NULL,
     CONSTRAINT user_review UNIQUE(ReviewerID,GameID)
+)
+CREATE TABLE Review.Platform(
+    ID INT PRIMARY KEY IDENTITY,
+    ConsoleName NVARCHAR(255) UNIQUE NOT NULL
+)
+CREATE TABLE Review.Tags(
+    ID INT PRIMARY KEY IDENTITY,
+    Genre NVARCHAR(255) UNIQUE NOT NULL
+)
+CREATE TABLE Review.GamePlatform(
+    ID INT PRIMARY KEY IDENTITY,
+    GameID INT FOREIGN KEY REFERENCES Review.Game(ID) ON DELETE CASCADE,
+    PlatformID INT FOREIGN KEY REFERENCES Review.Platform(ID) ON DELETE CASCADE
+)
+CREATE TABLE Review.GameTags(
+    ID INT PRIMARY KEY IDENTITY,
+    GameID INT FOREIGN KEY REFERENCES Review.Game(ID) ON DELETE CASCADE,
+    TagID INT FOREIGN KEY REFERENCES Review.Tags(ID) ON DELETE CASCADE
 )
 GO
