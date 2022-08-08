@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7lbF5JjI21vRUVWXkA6zW1CqEtUH6q8wbqZUt88QJ7xjz4uleRl1djeHUaugv+Oxz2UECP8RXDRMG0h+JYtibg==",
+  "dgSpecHash": "g4KZU9T3EIXdaJefk+9a8ESSVpAgM6epqETnmyjjxuEjwLtdBYvia5ECJXzH8Uq5VzWPHaTKy6/DnmVz6RqwSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj",
+  "projectFilePath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

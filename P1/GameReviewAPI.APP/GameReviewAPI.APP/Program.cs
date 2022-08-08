@@ -5,7 +5,8 @@ namespace GameReviewAPI.APP
 {
     class Program {
         public static readonly HttpClient client = new HttpClient();
-        private static string baseURI = "https://localhost:7100/api";
+        private static string baseURI = "https://demowebapp-jake.azurewebsites.net/api";
+
         static async Task Main(){
             bool loop = true;
             while (loop)

@@ -10,3 +10,15 @@ C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\G
 C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\refint\GameReviewAPI.Model.dll
 C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.pdb
 C:\Users\bsass\source\repos\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\ref\GameReviewAPI.Model.dll
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.deps.json
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.dll
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\bin\Debug\net6.0\GameReviewAPI.Model.pdb
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.csproj.AssemblyReference.cache
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.AssemblyInfoInputs.cache
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.AssemblyInfo.cs
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.csproj.CoreCompileInputs.cache
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.dll
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\refint\GameReviewAPI.Model.dll
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\GameReviewAPI.Model.pdb
+C:\Revature\TeamQP2\P1\GameReviewAPI\GameReviewAPI.Model\obj\Debug\net6.0\ref\GameReviewAPI.Model.dll

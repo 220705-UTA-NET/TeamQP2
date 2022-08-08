@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bsass\\source\\repos\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj": {}
+    "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bsass\\source\\repos\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj": {
+    "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj",
+        "projectUniqueName": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj",
         "projectName": "GameReviewAPI.APP",
-        "projectPath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj",
-        "packagesPath": "C:\\Users\\bsass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI.APP\\GameReviewAPI.APP\\obj\\",
+        "projectPath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI.APP\\GameReviewAPI.APP\\GameReviewAPI.APP.csproj",
+        "packagesPath": "C:\\Users\\Lance Gong\\.nuget\\packages\\",
+        "outputPath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI.APP\\GameReviewAPI.APP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bsass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lance Gong\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

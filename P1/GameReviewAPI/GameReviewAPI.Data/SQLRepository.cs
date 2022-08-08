@@ -14,9 +14,11 @@ namespace GameReviewAPI.Data
             _connectionString = connectionString;
             _logger = logger;
         }
-        public async Task<IEnumerable<Review>> GetAllReviewsAsync()
+
+        /*Probably will remove
+        public async Task<IEnumerable<Entry>> GetAllReviewsAsync()
         {
-            List<Review> reviews = new List<Review>();
+            List<Entry> reviews = new List<Entry>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -35,7 +37,7 @@ namespace GameReviewAPI.Data
                 int gameID = reader.GetInt32(4);
                 DateTime reviewDate = reader.GetDateTime(5);
 
-                Review tmpReview = new Review(id,review,rating,reviewerID,gameID,reviewDate);
+                Entry tmpReview = new Entry(id,review,rating,reviewerID,gameID,reviewDate);
                 // add a constructor for GameReview
                 reviews.Add(tmpReview);
             }
@@ -44,9 +46,12 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAllReviewsAsync, returned {0} results",reviews.Count);
             return reviews;
         }
-        public async Task<IEnumerable<AverageReview>> GetAverageReviewsDescendingAsync()
+        */
+
+        /* Lists games based on reviews
+        public async Task<IEnumerable<Entry>> GetAverageReviewsDescendingAsync()
         {
-            List<AverageReview> reviews = new List<AverageReview>();
+            List<Entry> reviews = new List<Entry>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -61,7 +66,7 @@ namespace GameReviewAPI.Data
                 double rating = reader.GetDouble(0);
                 string gameTitle = reader.GetString(1);
 
-                AverageReview tmpReview = new AverageReview(rating, gameTitle);
+                Entry tmpReview = new Entry(rating, gameTitle);
                 // add a constructor for GameReview
                 reviews.Add(tmpReview);
             }
@@ -70,9 +75,9 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAverageReviewsDescendingAsync, returned {0} results", reviews.Count);
             return reviews;
         }
-        public async Task<IEnumerable<AverageReview>> GetAverageReviewsAscendingAsync()
+        public async Task<IEnumerable<Entry>> GetAverageReviewsAscendingAsync()
         {
-            List<AverageReview> reviews = new List<AverageReview>();
+            List<Entry> reviews = new List<Entry>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -87,7 +92,7 @@ namespace GameReviewAPI.Data
                 double rating = reader.GetDouble(0);
                 string gameTitle = reader.GetString(1);
 
-                AverageReview tmpReview = new AverageReview(rating, gameTitle);
+                Entry tmpReview = new Entry(rating, gameTitle);
                 // add a constructor for GameReview
                 reviews.Add(tmpReview);
             }
@@ -96,6 +101,9 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAverageReviewsDescendingAsync, returned {0} results", reviews.Count);
             return reviews;
         }
+        */
+
+        //Lists all games in the database
         public async Task<IEnumerable<Game>> GetAllGamesAsync()
         {
             List<Game> games = new List<Game>();
@@ -125,9 +133,11 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAllGamesAsync, returned {0} results", games.Count);
             return games;
         }
-        public async Task<IEnumerable<Reviewer>> GetAllReviewersAsync()
+
+        /*
+        public async Task<IEnumerable<User>> GetAllReviewersAsync()
         {
-            List<Reviewer> reviewers = new List<Reviewer>();
+            List<User> reviewers = new List<User>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -143,7 +153,7 @@ namespace GameReviewAPI.Data
                 string user = reader.GetString(1);
                 string password = reader.GetString(2);
 
-                Reviewer tmpReviewer = new Reviewer(id, user, password);
+                Entry tmpReviewer = new Entry(id, user, password);
                 // add a constructor for GameReview
                 reviewers.Add(tmpReviewer);
             }
@@ -152,6 +162,9 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAllReviewersAsync, returned {0} results", reviewers.Count);
             return reviewers;
         }
+        */
+
+        // Rename to GetUserAsync
         public async Task<string> GetReviewerAsync(int id)
         {
             string reviewer = "";
@@ -196,9 +209,9 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetGamesByDeveloperAsync, returned {0} results", games.Count);
             return games;
         }
-        public async Task<IEnumerable<Review>> GetReviewsByIDAsync(int id)
+        public async Task<IEnumerable<Entry>> GetReviewsByIDAsync(int id)
         {
-            List<Review> reviews = new List<Review>();
+            List<Entry> reviews = new List<Entry>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -217,7 +230,7 @@ namespace GameReviewAPI.Data
                 int gameID = reader.GetInt32(4);
                 DateTime reviewDate = reader.GetDateTime(5);
 
-                Review tmpReview = new Review(id, review, rating, reviewerID, gameID, reviewDate);
+                Entry tmpReview = new Entry(id, review, rating, reviewerID, gameID, reviewDate);
                 // add a constructor for GameReview
                 reviews.Add(tmpReview);
             }
@@ -255,6 +268,7 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetReviewsByIDAsync, returned {0} results", games.Count);
             return games;
         }
+        /* Login function
         public async Task PostInsertReviewerAsync(string userId,string password)
         {
             using SqlConnection connection = new(_connectionString);
@@ -328,9 +342,9 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed PostInsertReviewAsync");
             return;
         }
-        public async Task<IEnumerable<GameReview>> GetAllReviewsForGameAsync(string game)
+        public async Task<IEnumerable<Entry>> GetAllReviewsForGameAsync(string game)
         {
-            List<GameReview> gameReviews = new List<GameReview>();
+            List<Entry> gameReviews = new List<Entry>();
 
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
@@ -349,7 +363,7 @@ namespace GameReviewAPI.Data
                 int starRating = reader.GetInt32(3);
                 DateTime reviewDate = reader.GetDateTime(4);
 
-                GameReview tmpGameReview = new GameReview(userID, title, review, starRating, reviewDate);
+                Entry tmpGameReview = new Entry(userID, title, review, starRating, reviewDate);
                 // add a constructor for GameReview
                 gameReviews.Add(tmpGameReview);
             }
@@ -358,5 +372,6 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAllReviewsForGameAsync, returned {0} results", gameReviews.Count);
             return gameReviews;
         }
+        */
     }
 }

@@ -18,9 +18,9 @@ namespace GameReviewAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Review>>> GetAllReviews()
+        public async Task<ActionResult<IEnumerable<Entry>>> GetAllReviews()
         {
-            IEnumerable<Review> reviews;
+            IEnumerable<Entry> reviews;
             try
             {
                 reviews = await _repo.GetAllReviewsAsync();
@@ -33,9 +33,9 @@ namespace GameReviewAPI.API.Controllers
             return reviews.ToList();
         }
         [HttpGet("Descending")]
-        public async Task<ActionResult<IEnumerable<AverageReview>>> GetAverageReviewsDescending()
+        public async Task<ActionResult<IEnumerable<Entry>>> GetAverageReviewsDescending()
         {
-            IEnumerable<AverageReview> ratings;
+            IEnumerable<Entry> ratings;
             try
             {
                 ratings = await _repo.GetAverageReviewsDescendingAsync();
@@ -48,9 +48,9 @@ namespace GameReviewAPI.API.Controllers
             return ratings.ToList();
         }
         [HttpGet("Ascending")]
-        public async Task<ActionResult<IEnumerable<AverageReview>>> GetAverageReviewsAscending()
+        public async Task<ActionResult<IEnumerable<Entry>>> GetAverageReviewsAscending()
         {
-            IEnumerable<AverageReview> ratings;
+            IEnumerable<Entry> ratings;
             try
             {
                 ratings = await _repo.GetAverageReviewsAscendingAsync();
@@ -63,9 +63,9 @@ namespace GameReviewAPI.API.Controllers
             return ratings.ToList();
         }
         [HttpGet("byID")]
-        public async Task<ActionResult<IEnumerable<Review>>> GetReviewsByID(int ID)
+        public async Task<ActionResult<IEnumerable<Entry>>> GetReviewsByID(int ID)
         {
-            IEnumerable<Review> reviews;
+            IEnumerable<Entry> reviews;
             try
             {
                 reviews = await _repo.GetReviewsByIDAsync(ID);
@@ -78,7 +78,7 @@ namespace GameReviewAPI.API.Controllers
             return reviews.ToList();
         }
         [HttpPost("insertReview")]
-        public async Task<ActionResult> PostInsertReview([FromBody]Review review)
+        public async Task<ActionResult> PostInsertReview([FromBody]Entry review)
         {
             try
             {
@@ -106,9 +106,9 @@ namespace GameReviewAPI.API.Controllers
             return StatusCode(200);
         }
         [HttpGet("gameReview")]
-        public async Task<ActionResult<IEnumerable<GameReview>>> GetAllReviewsForGame(string game)
+        public async Task<ActionResult<IEnumerable<Entry>>> GetAllReviewsForGame(string game)
         {
-            IEnumerable<GameReview> reviews;
+            IEnumerable<Entry> reviews;
             try
             {
                 reviews = await _repo.GetAllReviewsForGameAsync(game);

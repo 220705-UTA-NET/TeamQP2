@@ -536,19 +536,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bsass\\.nuget\\packages\\": {}
+    "C:\\Users\\Lance Gong\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Data\\GameReviewAPI.Data.csproj",
+      "projectUniqueName": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Data\\GameReviewAPI.Data.csproj",
       "projectName": "GameReviewAPI.Data",
-      "projectPath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Data\\GameReviewAPI.Data.csproj",
-      "packagesPath": "C:\\Users\\bsass\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Data\\obj\\",
+      "projectPath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Data\\GameReviewAPI.Data.csproj",
+      "packagesPath": "C:\\Users\\Lance Gong\\.nuget\\packages\\",
+      "outputPath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bsass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lance Gong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -562,8 +566,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj": {
-              "projectPath": "C:\\Users\\bsass\\source\\repos\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj"
+            "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj": {
+              "projectPath": "C:\\Revature\\TeamQP2\\P1\\GameReviewAPI\\GameReviewAPI.Model\\GameReviewAPI.Model.csproj"
             }
           }
         }
