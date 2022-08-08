@@ -3,10 +3,14 @@ using System.Text.Json;
 
 namespace GameReviewAPI.APP
 {
-    class Program {
+    class Program
+    {
         public static readonly HttpClient client = new HttpClient();
-        private static string baseURI = "https://localhost:7100/api";
-        static async Task Main(){
+        // Jake (8/8): Changed baseURI to connect to our public Azure API
+        private static string baseURI = "https://demowebapp-jake.azurewebsites.net/api";
+        // private static string baseURI = "https://localhost:7100/api";
+        static async Task Main()
+        {
             bool loop = true;
             while (loop)
             {
@@ -82,7 +86,7 @@ namespace GameReviewAPI.APP
                         int year = int.Parse(Console.ReadLine());
                         Game game = new Game(title, developer, genre, year);
                         var content = new StringContent(JsonSerializer.Serialize(game), Encoding.UTF8, "application/json");
-                        await client.PostAsync(baseURI + $"/Game/insertGame",content);
+                        await client.PostAsync(baseURI + $"/Game/insertGame", content);
                         Console.Clear();
                         Console.WriteLine("Game successfully inserted!\n");
                         break;
@@ -205,8 +209,8 @@ namespace GameReviewAPI.APP
                         Console.WriteLine("Input not understood. Please enter a valid option");
                         break;
                 }
-                
+
             }
         }
-}
     }
+}
