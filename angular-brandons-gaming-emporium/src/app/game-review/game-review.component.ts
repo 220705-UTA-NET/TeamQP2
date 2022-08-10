@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component} from '@angular/core';
 import { Review } from '../review';
+
 
 @Component({
   selector: 'app-game-review',
@@ -8,9 +10,6 @@ import { Review } from '../review';
 })
 export class GameReviewComponent{
 
-  platforms = ['PC', 'XBOX',
-    'PlayStation'];
-
   today = new Date();
 
   model = new Review(1, "Game kinda sucks ong", 1, "LeBrando25", "Rocket League", (this.today.getMonth() + 1) + '-' + this.today.getDate() + '-' +this.today.getFullYear() );
@@ -18,10 +17,9 @@ export class GameReviewComponent{
   submitted = false;
 
   onSubmit() { this.submitted = true; }
-
+  
   showFormControls(form: any) {
     return form && form.controls.name &&
       form.controls.name.value;
   }
-
 }
