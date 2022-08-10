@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { Hero } from '../hero';
 
 @Component({
-  selector: 'app-game-review',
-  templateUrl: './game-review.component.html',
-  styleUrls: ['./game-review.component.css']
+  selector: 'app-hero-form',
+  templateUrl: './hero-form.component.html',
+  styleUrls: ['./hero-form.component.css']
 })
-export class GameReviewComponent {
+export class HeroFormComponent {
 
   tags = ['Multiplayer', 'Looter Shooter',
             'RPG', 'Single Player'];

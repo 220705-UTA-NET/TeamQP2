@@ -1,8 +1,15 @@
 <div class="component">
+<!-- ====================================================  -->
+  <!-- <ul class="navbar">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li class="login"><a href="#about">Login</a></li>
+  </ul> -->
   <div class="container">
       <h1>Add Game Entry</h1>
       <br><br>
-      <form #gameForm="ngForm">
+      <form #heroForm="ngForm">
         <div class="form-group">
           <label for="name">Game Title</label>
           <input type="text" class="form-control" id="name"
@@ -49,4 +56,17 @@
         {{ model | json }}
       </form>
   </div>
-</div>
+
+  <!-- EXTRA MATERIAL FOR DOCUMENTATION -->
+  <!-- <hr>
+    <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="model.name" name="name">
+    TODO: remove this: {{model.name}}
+  <hr>
+    <input type="text" class="form-control" id="name"
+           required
+           [ngModel]="model.name" name="name"
+           (ngModelChange)="model.name = $event">
+    TODO: remove this: {{model.name}}
+</div> -->
