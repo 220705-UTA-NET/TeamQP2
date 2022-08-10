@@ -1,32 +1,25 @@
-import { Component } from '@angular/core';
 
-import { Hero } from '../hero';
+import { Component} from '@angular/core';
+import { Review } from '../review';
+
 
 @Component({
   selector: 'app-game-review',
   templateUrl: './game-review.component.html',
   styleUrls: ['./game-review.component.css']
 })
-export class GameReviewComponent {
+export class GameReviewComponent{
 
-  tags = ['Multiplayer', 'Looter Shooter',
-            'RPG', 'Single Player'];
+  today = new Date();
 
-  model = new Hero(1, "Borderlands 2", 5, "Gearbox", "2K", 2012, ["Computer"], this.tags);
+  model = new Review(1, "Game kinda sucks ong", 1, "LeBrando25", "Rocket League", (this.today.getMonth() + 1) + '-' + this.today.getDate() + '-' +this.today.getFullYear() );
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
-
-  //////// NOT SHOWN IN DOCS ////////
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
+  
   showFormControls(form: any) {
     return form && form.controls.name &&
-    form.controls.name.value; // Dr. IQ
+      form.controls.name.value;
   }
-
-  /////////////////////////////
-
 }

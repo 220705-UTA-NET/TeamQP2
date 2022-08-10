@@ -9,8 +9,10 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
+
+import { AddGameComponent } from './add-game/add-game.component';
 import { GameReviewComponent } from './game-review/game-review.component';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
   imports: [
@@ -22,8 +24,9 @@ import { GameReviewComponent } from './game-review/game-review.component';
   ],
   declarations: [
     AppComponent,
-    HeroFormComponent,
-    GameReviewComponent
+    AddGameComponent,
+    GameReviewComponent,
+    FrontPageComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
