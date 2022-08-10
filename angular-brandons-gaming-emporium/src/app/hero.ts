@@ -1,4 +1,4 @@
-export class Game {
+export class Hero {
 
   constructor(
     public id: number,
