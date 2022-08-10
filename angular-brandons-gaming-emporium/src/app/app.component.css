@@ -4,6 +4,7 @@ text
 }
 nav {
     background-color: black;
+    position: absolute;
     width: 100%;
 }
 nav a {
