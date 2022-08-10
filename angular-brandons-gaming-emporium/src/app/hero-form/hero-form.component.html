@@ -1,7 +1,14 @@
 <div class="component">
 <!-- ====================================================  -->
+  <!-- <ul class="navbar">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li class="login"><a href="#about">Login</a></li>
+  </ul> -->
   <div class="container">
-      <h1>Add Game</h1>
+      <h1>Add Game Entry</h1>
+      <br><br>
       <form #heroForm="ngForm">
         <div class="form-group">
           <label for="name">Game Title</label>
@@ -44,6 +51,7 @@
         </div>
 
         <button type="submit" class="btn btn-success">Submit</button>
+        <br>
         <br>
         {{ model | json }}
       </form>
