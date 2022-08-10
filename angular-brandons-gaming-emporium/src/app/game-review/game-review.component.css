@@ -1,0 +1,22 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+  color: lime;
+  text-shadow: 0 0 3px #00CC00, 0 0 4px #00AA00, 0 0 5px #009400, 0 0 9px #006900, 0 0 15px #003600, 0 0 20px #001b00;
+}
+
+label {
+  font-size: 20px;
+  color: lime;
+  text-shadow: 0 0 2px #00CC00, 0 0 3px #00AA00, 0 0 4px #009400, 0 0 5px #006900, 0 0 10px #003600, 0 0 15px #001b00;
+}
+
+input {
+  background-color: rgb(30, 30, 30);
+  color: lime;
+}
+
+select {
+  background-color: rgb(30, 30, 30);
+  color: lime;
+}
