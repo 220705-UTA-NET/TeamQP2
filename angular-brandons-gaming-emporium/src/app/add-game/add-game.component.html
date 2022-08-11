@@ -1,0 +1,52 @@
+<div class="component">
+  <div class="container">
+      <h1>Add Game Entry</h1>
+      <br><br>
+      <form #gameForm="ngForm">
+        <div class="form-group">
+          <label for="name">Game Title</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="model.name" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating</label>
+          <input type="text"  class="form-control" id="rating"
+                 [(ngModel)]="model.rating" name="rating">
+        </div>
+
+        <div class="form-group">
+          <label for="developer">Developer</label>
+          <input type="text"  class="form-control" id="developer"
+                 [(ngModel)]="model.developer" name="developer">
+        </div>
+
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+          <input type="text"  class="form-control" id="publisher"
+                 [(ngModel)]="model.publisher" name="publisher">
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year Published</label>
+          <input type="text"  class="form-control" id="year"
+                 [(ngModel)]="model.year" name="year">
+        </div>
+
+        <div class="form-group">
+          <label for="tags">Tags</label>
+          <select class="form-control"  id="tags"
+                  required
+                  [(ngModel)]="model.tags" name="tags">
+            <option *ngFor="let tag of tags" [value]="tag">{{tag}}</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <br>
+        <br>
+        {{ model | json }}
+      </form>
+  </div>
+</div>
