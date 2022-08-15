@@ -1,0 +1,39 @@
+<div class="main-container">
+    <div class="main_header">
+        <ul>
+            <div class="logo active">
+                <li>BGE</li>
+            </div>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="">Home</a></li>
+            <!-- localhost:4200/Home -->
+            <li routerLinkActive="active"><a routerLink="/Games">Discover</a></li><!-- localhost:4200/About -->
+            <li routerLinkActive="active"><a routerLink="/Contact">Browse</a></li><!-- localhost:4200/Contact -->
+            <li routerLinkActive="active"><a routerLink="/Courses">Review</a></li><!-- localhost:4200/Courses -->
+            <div class="login_header">
+                <li routerLinkActive="active"><a routerLink="/Courses">Login</a></li>
+                <li routerLinkActive="active"><a routerLink="/About">Signup</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="search_bar">
+        <form class="search_form" role="search">
+            <div class="search_input_area">
+                <input class="search_input" type="text" role="searchbox" placeholder="Search through games">
+            </div>
+            <div class="drop_down">
+                <!-- Drop down suggestion -->
+                <div class="dropdown" id="dropdown-container">
+                    <div class="dropdown_button" role="button" tabindex="0"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="component-container">
+        <!-- <app-home></app-home>
+        <app-about></app-about>
+        <app-contact></app-contact>
+        <app-courses></app-courses> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

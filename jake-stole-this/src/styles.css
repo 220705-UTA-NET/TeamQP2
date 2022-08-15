@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Bahnschrift", sans-serif;
+    font-stretch: condensed;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+.active{
+    color: white;
+    text-shadow:
+    0 0 2px #00CC00,
+    0 0 3px #00AA00,
+    0 0 4px #009400,
+    0 0 5px #006900,
+    0 0 10px #003600,
+    0 0 15px #001b00;
+}
