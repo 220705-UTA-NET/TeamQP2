@@ -21,7 +21,9 @@
 *.userosscache
 *.sln.docstates
 */.vscode/*
+*/.vs/*
 */node_modules/*
+*/.angular/*
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
