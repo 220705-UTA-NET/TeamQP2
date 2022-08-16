@@ -11,6 +11,7 @@ import { CoursesService } from './services/courses.service';
 import { CourseComponent } from './courses/course/course.component';
 import { GamesComponent } from './games/games.component';
 import { SearchComponent } from './search/search.component';
+import { GameComponent } from './game/game.component';
 
 
 const appRoutes: Routes = [
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     CourseComponent,
     GamesComponent,
     SearchComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
