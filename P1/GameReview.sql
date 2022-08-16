@@ -19,7 +19,7 @@ CREATE TABLE Review.GameReview(
     ID INT PRIMARY KEY IDENTITY,
     -- generic text field
     Review NVARCHAR(MAX),
-    StarRating INT CHECK (StarRating <= 5 AND StarRating >+ 0) NOT NULL,
+    StarRating INT CHECK (StarRating <= 5 AND StarRating > 0) NOT NULL,
     ReviewerID INT NOT NULL FOREIGN KEY REFERENCES Review.Reviewer(ID),
     GameID INT NOT NULL FOREIGN KEY REFERENCES Review.Game(ID),
     -- foreign key reference back to reviewer
@@ -44,4 +44,15 @@ CREATE TABLE Review.GameTags(
     GameID INT FOREIGN KEY REFERENCES Review.Game(ID) ON DELETE CASCADE,
     TagID INT FOREIGN KEY REFERENCES Review.Tags(ID) ON DELETE CASCADE
 )
+SELECT * FROM Review.Tags
+SELECT * FROM Review.Game
+INSERT INTO Review.Tags(Genre) VALUES('single-player')
+INSERT INTO Review.GameTags(GameID,TagID) VALUES(1,1)
+INSERT INTO Review.GameTags(GameID,TagID) VALUES(1,2)
+
+SELECT t.Genre 
+FROM Review.Game as g
+JOIN Review.GameTags as gt on g.ID = gt.GameID
+JOIN Review.Tags as t on t.ID = gt.TagID
+
 GO

@@ -9,9 +9,9 @@ namespace GameReviewAPI.API.Controllers
     [ApiController]
     public class GameController : ControllerBase
     {
-        private readonly GameIRepository _repo;
+        private readonly IRepository _repo;
         private readonly ILogger<GameController> _logger;
-        public GameController(GameIRepository repo, ILogger<GameController> logger)
+        public GameController(IRepository repo, ILogger<GameController> logger)
         {
             _repo = repo;
             _logger = logger;
@@ -47,12 +47,12 @@ namespace GameReviewAPI.API.Controllers
             return games.ToList();
         }
         [HttpGet("Genre")]
-        public async Task<ActionResult<IEnumerable<Game>>> GetGamesByTag(string genre)
+        public async Task<ActionResult<IEnumerable<Game>>> GetGamesByGenre(string genre)
         {
             IEnumerable<Game> games;
             try
             {
-                games = await _repo.GetGamesByTagsAsync(genre);
+                games = await _repo.GetGamesByGenreAsync(genre);
             }
             catch (Exception e)
             {
@@ -66,7 +66,7 @@ namespace GameReviewAPI.API.Controllers
         {
             try
             {
-                await _repo.PostInsertGameAsync(game.GameTitle, game.GameDeveloper, game.GamePublisher, game.YearPublished);
+                await _repo.PostInsertGameAsync(game.GameTitle, game.GameDeveloper, game.GameGenre, game.YearPublished);
             }
             catch (Exception e)
             {

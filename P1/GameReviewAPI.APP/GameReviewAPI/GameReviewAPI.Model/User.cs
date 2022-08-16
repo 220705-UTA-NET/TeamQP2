@@ -2,13 +2,13 @@
 
 namespace GameReviewAPI.Model
 {
-    public class User
+    public class Reviewer
     {
         public int ID { get; set; }
         public string UserID { get; set; }
         public string Password { get; set; }
 
-        public User(int iD, string userID, string password)
+        public Reviewer(int iD, string userID, string password)
         {
             this.ID = iD;
             this.UserID = userID;

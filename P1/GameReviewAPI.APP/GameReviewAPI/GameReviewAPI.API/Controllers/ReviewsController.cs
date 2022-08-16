@@ -9,9 +9,9 @@ namespace GameReviewAPI.API.Controllers
     [ApiController]
     public class ReviewsController : ControllerBase
     {
-        private readonly ReviewIRepository _repo;
+        private readonly IRepository _repo;
         private readonly ILogger<ReviewsController> _logger;
-        public ReviewsController(ReviewIRepository repo, ILogger<ReviewsController> logger)
+        public ReviewsController(IRepository repo, ILogger<ReviewsController> logger)
         {
             _repo = repo;
             _logger = logger;
@@ -92,11 +92,11 @@ namespace GameReviewAPI.API.Controllers
             return StatusCode(200);
         }
         [HttpDelete("deleteReview")]
-        public async Task<ActionResult> DeleteReview(int reviewerID, int gameID)
+        public async Task<ActionResult> PostDeleteReview(int reviewerID, int gameID)
         {
             try
             {
-                await _repo.DeleteReviewAsync(reviewerID, gameID);
+                await _repo.PostDeleteReviewAsync(reviewerID, gameID);
             }
             catch (Exception e)
             {
