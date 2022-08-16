@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../Services/courses.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-games',
@@ -8,12 +8,12 @@ import { CoursesService } from '../Services/courses.service';
 })
 export class GamesComponent implements OnInit {
   
-  constructor(private coursesService: CoursesService) { }
+  constructor(private apiService: ApiService) { }
 
-  courses = [];
+  games = [];
 
   ngOnInit(): void {
-    this.courses = this.coursesService.courses;
+    this.apiService.getGames().subscribe((games) => (this.games = games));
   }
 
 }

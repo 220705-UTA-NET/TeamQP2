@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CoursesService } from 'src/app/Services/courses.service';
+import { CoursesService } from 'src/app/services/courses.service';
 
 @Component({
   selector: 'app-course',

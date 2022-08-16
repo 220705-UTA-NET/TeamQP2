@@ -6,22 +6,13 @@
         <h2>Popular Courses</h2>
         <hr style="border: #ccc 2px solid; margin: 5px 0px">
     
-        <ng-container *ngFor="let course of courses">
-            <div class="course-container" *ngIf="course.ratings >= 4.6">
+        <ng-container *ngFor="let game of games">
+            <div class="course-container" *ngIf="game.ratings >= 4.6">
                 <div class="course-card">
                     <div>
                         <img [src]="course.image" style="width:220px; height:140px;">
                     </div>
-                    <div class="course-name"><h4>{{ course.name}}</h4></div>
-                    <div class="course-description"><p>{{course.description.slice(0, 80)}}...</p></div>
-                    <div class="details">
-                        <div class="course-type" [ngStyle]="{color: course.type === 'Free' ? 'Green' : 'Red'}">{{course.type}}</div>
-                        <div class="course-price"><b>Price:</b> ${{course.price}}</div>
-                    </div>
-                    <div class="course-buttons">
-                        <button class="btn btn-buy">Buy Now</button>
-                        <button class="btn btn-show">Show Deatils</button>
-                    </div>
+                    <div class="course-name"><h4>{{game.name}}</h4></div>
                 </div>
             </div>  
         </ng-container>
