@@ -151,7 +151,7 @@ namespace GameReviewAPI.Data
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
 
-            string cmdText = $"DELETE FROM Review.GameReview WHERE ReviewerID LIKE '%{UserName}%' AND GameID LIKE '%{GameTitle}%'";
+            string cmdText = $"DELETE FROM Review.GameReview WHERE UserName LIKE '%{UserName}%' AND GameTitle LIKE '%{GameTitle}%'";
 
             using SqlCommand cmd = new(cmdText, connection);
 
@@ -168,7 +168,7 @@ namespace GameReviewAPI.Data
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
 
-            string cmdText = $"SELECT UserName, GameTitle, Review, StarRating, ReviewDate FROM Review.GameReview WHERE g.GameTitle LIKE '%{game}%'";
+            string cmdText = $"SELECT UserName, GameTitle, Review, StarRating, ReviewDate FROM Review.GameReview WHERE GameTitle LIKE '%{game}%'";
 
             using SqlCommand cmd = new(cmdText, connection);
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
