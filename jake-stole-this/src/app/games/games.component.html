@@ -9,9 +9,6 @@
         <ng-container *ngFor="let game of games">
             <div class="course-container" *ngIf="game.ratings >= 4.6">
                 <div class="course-card">
-                    <div>
-                        <img [src]="course.image" style="width:220px; height:140px;">
-                    </div>
                     <div class="course-name"><h4>{{game.name}}</h4></div>
                 </div>
             </div>  
