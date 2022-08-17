@@ -36,7 +36,7 @@ namespace GameReviewAPI.API.Controllers
         {
             try
             {
-                await _repo.PostInsertUserAsync(reviewer.UserID, reviewer.Password);
+                await _repo.PostInsertUserAsync(reviewer.userName, reviewer.password);
             }
             catch (Exception e)
             {

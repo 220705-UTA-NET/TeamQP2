@@ -3,7 +3,8 @@ using GameReviewAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string connectionString = "Server=tcp:myfirstdatabase-brandon.database.windows.net,1433;Initial Catalog=myfirstdatabase;Persist Security Info=False;User ID=bsassano;Password=Bts2000!!!;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+// Jake saves Brandon's life
+string connectionString = builder.Configuration.GetConnectionString("connectionString");
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -30,15 +30,15 @@ namespace GameReviewAPI.Data
             return reviewer;
         }
 
-        public async Task PostInsertUserAsync(string userId, string password)
+        public async Task PostInsertUserAsync(string userName, string password)
         {
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
 
-            string cmdText = "INSERT INTO Review.Reviewer (UserID, Password) VALUES (@userId,@password)";
+            string cmdText = "INSERT INTO Review.Reviewer (UserName, Password) VALUES (@userName,@password)";
 
             using SqlCommand cmd = new(cmdText, connection);
-            cmd.Parameters.AddWithValue("@userID", userId);
+            cmd.Parameters.AddWithValue("@userName", userName);
             cmd.Parameters.AddWithValue("@password", password);
             await cmd.ExecuteReaderAsync();
 
