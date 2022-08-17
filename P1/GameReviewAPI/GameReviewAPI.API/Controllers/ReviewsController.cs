@@ -120,5 +120,20 @@ namespace GameReviewAPI.API.Controllers
             }
             return reviews.ToList();
         }
+        [HttpGet("AverageRating")]
+        public async Task<ActionResult<AverageReview>> GetGameAverageReview(string game)
+        {
+            AverageReview review;
+            try
+            {
+                review = await _repo.GetGameAverageReviewAsync(game);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return review;
+        }
     }
 }
