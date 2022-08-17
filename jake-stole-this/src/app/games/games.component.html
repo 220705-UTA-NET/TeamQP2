@@ -1,18 +1,10 @@
 <div class="container">
-    <div class="hero-section">
-        <!-- <img src="assets/images/courses.jpg" width="940"> -->
-    </div>
-    <div>
-        <h2>Popular Courses</h2>
-        <hr style="border: #ccc 2px solid; margin: 5px 0px">
-    
-        <!-- <ng-container *ngFor="let game of games">
-            <div class="course-container" *ngIf="game.ratings >= 4.6">
-                <div class="course-card">
-                    <div class="course-name"><h4>{{game.name}}</h4></div>
-                </div>
-            </div>  
-        </ng-container> -->
-    </div>
+    <h1>All Games</h1>
+    <!-- <ng-container *ngFor="let game of games">
+        <app-game></app-game>
+    </ng-container> -->
+    <app-game
+        *ngFor="let game of games"
+        [game]="game"
+    ></app-game>
 </div>
-

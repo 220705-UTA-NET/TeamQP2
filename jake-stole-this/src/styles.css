@@ -4,6 +4,9 @@
     padding: 0px 0px;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
 body {
     font-family: "Bahnschrift", sans-serif;
     font-stretch: condensed;
@@ -11,7 +14,18 @@ body {
     font-weight: bold;
     margin: 0;
     color: white;
-    background-color: rgb(20, 20, 20);
+}
+.background{
+    background: no-repeat center center fixed;
+    background: black;
+    background: radial-gradient(ellipse at center, rgb(0, 25, 1) 2%,rgb(0, 15, 2) 40%, rgb(0, 10, 2) 70%, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .active{
     color: white;

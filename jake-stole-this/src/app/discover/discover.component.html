@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Random Game</h1>
+    <app-game *ngIf="random_game" [game]="random_game"></app-game>
+    <h1 style = "margin-top: 40px;">Top Rated</h1>
+    <app-game
+        *ngFor="let game of games"
+        [game]="game"
+    ></app-game>
+</div>

@@ -1,10 +1,10 @@
 export interface Game {
     id?: number;
-    game: string;
-    developer: string;
-    publisher: string;
-    tags: string[];
+    gameTitle: string;
+    gameDeveloper: string;
+    gamePublisher: string;
     platforms: string[];
-    year: number;
+    tags: string[];
+    yearPublished: number;
   }
   
