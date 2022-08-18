@@ -27,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'Games', component: GamesComponent },
   { path: 'Reviews', component: ReviewsComponent },
   { path: 'ReviewGame', component: ReviewGameComponent },
+  { path: 'ReviewGame/:name', component: ReviewGameComponent },
   { path: 'GameReviews/:name', component: GameReviewsComponent },
   { path: 'Freebies', component: FreebiesComponent },
   { path: 'Freebie/:id', component: FreebieComponent }
