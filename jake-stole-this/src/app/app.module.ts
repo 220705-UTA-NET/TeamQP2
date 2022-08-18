@@ -13,16 +13,21 @@ import { DiscoverComponent } from './discover/discover.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewComponent } from './reviews/review/review.component';
 import { ReviewGameComponent } from './review-game/review-game.component';
+import { FreebiesComponent } from './freebies/freebies.component';
+import { FreebiesService } from './Services/freebies.service';
+import { FreebieComponent } from './freebies/freebie/freebie.component';
 
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'Home', component: HomeComponent},
-  {path: 'Game', component: GameComponent},
-  {path: 'Discover', component: DiscoverComponent},
-  {path: 'Games', component: GamesComponent},
-  {path: 'Reviews', component: ReviewsComponent},
-  {path: 'ReviewGame', component: ReviewGameComponent}
+  { path: '', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
+  { path: 'Game', component: GameComponent },
+  { path: 'Discover', component: DiscoverComponent },
+  { path: 'Games', component: GamesComponent },
+  { path: 'Reviews', component: ReviewsComponent },
+  { path: 'ReviewGame', component: ReviewGameComponent },
+  { path: 'Freebies', component: FreebiesComponent },
+  { path: 'Freebie/:id', component: FreebieComponent }
 ]
 
 @NgModule({
@@ -36,6 +41,8 @@ const appRoutes: Routes = [
     ReviewsComponent,
     ReviewComponent,
     ReviewGameComponent,
+    FreebiesComponent,
+    FreebieComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [CoursesService],
+  providers: [
+    CoursesService,
+    FreebiesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

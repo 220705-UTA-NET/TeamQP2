@@ -1,0 +1,23 @@
+<div class="freebie-container">
+    <div>
+        <img src="{{freebie.image}}" width="560" height="280">
+    </div>
+    <div>
+        <h1 style="text-align: center;">{{freebie.name}}</h1>
+    </div>
+    <div class="freebie-details">
+        <div style="margin: 0px 10px;"><b>Developer: </b>{{freebie.developer}}</div>
+        <div style="margin: 0px 10px;"><b>Publisher: </b>{{freebie.publisher}}</div>
+        <div style="margin: 0px 10px;"><b>Platform: </b>{{freebie.platform}}</div>
+    </div>
+    <div style="margin: 0px 10px;">
+        <h2>{{freebie.type}}</h2>
+    </div>
+    <div style="margin: 20px 10px;">
+        <p>{{freebie.description}}</p>
+    </div>
+    <div class="freebie-buttons">
+        <button class="btn btn-buy"><a href={{freebie.link}}>Play Now</a></button>
+        <button class="btn btn-show" routerLink="/Freebies">Check other Freebies</button>
+    </div>
+</div>

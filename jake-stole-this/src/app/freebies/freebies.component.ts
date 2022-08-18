@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FreebiesService } from '../Services/freebies.service';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-freebies',
+  templateUrl: './freebies.component.html',
+  styleUrls: ['./freebies.component.css']
 })
-export class HomeComponent implements OnInit {
+export class FreebiesComponent implements OnInit {
 
   constructor(private freebiesService: FreebiesService) { }
 
@@ -16,5 +15,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.freebies = this.freebiesService.freebies;
   }
-
 }

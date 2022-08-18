@@ -1,0 +1,26 @@
+.freebie-container{
+    width: 580px;
+    margin: 20px auto;
+    padding: 10px 10px;
+    /* background-color: #fff; */
+}
+.freebie-details{
+    display: flex;
+    margin: 20px 0px;
+    text-align: center;
+}
+.freebie-buttons{
+    display: flex;
+}
+.btn{
+    width: 140px;
+    height: 30px;
+    border: none;
+    margin: 5px 3px;
+}
+.btn-buy{
+    background-color: #EC7063;
+}
+.btn-show{
+    background-color: #ABEBC6;
+}

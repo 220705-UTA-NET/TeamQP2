@@ -3,27 +3,34 @@
         <img src="../../assets/images/banner.png" width="940">
     </div>
     <div>
-        <h2>Popular Courses</h2>
-        <hr style="border: #ccc 2px solid; margin: 5px 0px">
-    
-        <ng-container *ngFor="let course of courses">
-            <div class="course-container" *ngIf="course.ratings >= 4.6">
-                <div class="course-card">
+        <h2>All Freebies</h2>
+        <ng-container *ngFor="let freebie of freebies">
+            <div class="freebie-container">
+                <div class="freebie-card">
                     <div>
-                        <img [src]="course.image" style="width:220px; height:140px;">
+                        <img [src]="freebie.image" style="width:220px; height:140px;">
                     </div>
-                    <div class="course-name"><h4>{{ course.name}}</h4></div>
-                    <div class="course-description"><p>{{course.description.slice(0, 80)}}...</p></div>
+                    <div class="freebie-name">
+                        <h4>{{freebie.name}}</h4>
+                    </div>
+                    <div class="freebie-description">
+                        <p>
+                            {{freebie.description.slice(0, 80)}}...</p>
+                    </div>
                     <div class="details">
-                        <div class="course-type" [ngStyle]="{color: course.type === 'Free' ? 'Green' : 'Red'}">{{course.type}}</div>
-                        <div class="course-price"><b>Price:</b> ${{course.price}}</div>
+                        <div class="freebie-type" [ngStyle]="{color: freebie.type === 'Free' ? 'Green' : 'Red'}">
+                            {{freebie.type}}
+                        </div>
                     </div>
-                    <div class="course-buttons">
-                        <button class="btn btn-buy">Buy Now</button>
-                        <button class="btn btn-show">Show Deatils</button>
+    
+                    <div class="freebie-buttons">
+    
+                        <button class="btn btn-buy"><a href={{freebie.link}}>Play Now</a></button>
+    
+                        <button class="btn btn-show" routerLink="/Freebie/{{freebie.id}}">Show Details</button>
                     </div>
                 </div>
-            </div>  
+            </div>
         </ng-container>
     </div>
 </div>

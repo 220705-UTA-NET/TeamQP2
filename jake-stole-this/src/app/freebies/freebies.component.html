@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>All Freebies</h2>
+    <ng-container *ngFor="let freebie of freebies">
+        <div class="freebie-container">
+            <div class="freebie-card">
+                <div>
+                    <img [src]="freebie.image" style="width:220px; height:140px;">
+                </div>
+                <div class="freebie-name">
+                    <h4>{{freebie.name}}</h4>
+                </div>
+                <div class="freebie-description">
+                    <p>
+                        {{freebie.description.slice(0, 80)}}...</p>
+                </div>
+                <div class="details">
+                    <div class="freebie-type" [ngStyle]="{color: freebie.type === 'Free' ? 'Green' : 'Red'}">
+                        {{freebie.type}}
+                    </div>
+                </div>
+
+                <div class="freebie-buttons">
+
+                    <button class="btn btn-buy"><a href={{freebie.link}}>Play Now</a></button>
+
+                    <button class="btn btn-show" routerLink="/Freebie/{{freebie.id}}">Show Details</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

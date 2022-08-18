@@ -6,43 +6,6 @@
     text-align: center;
 }
 
-.course-container {
-    display: inline-flex;
-}
-
-.course-card {
-    width: 220px;
-    height: 320px;
-    margin: 10px 10px;
-    background-color: #F8F9F9;
-}
-
-.course-name {
-    text-align: center;
-}
-
-.course-description {
-    margin: 10px 0px;
-    padding: 5px 10px;
-    font-size: 12px;
-}
-
-.details {
-    display: flex;
-    margin: 10px 0px;
-}
-
-.course-type {
-    width: 50%;
-    font-weight: bold;
-}
-
-.course-buttons {
-    display: flex;
-}
-
-
-
 .freebie-container {
     display: inline-flex;
 }
