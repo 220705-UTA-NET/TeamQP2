@@ -16,5 +16,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.freebies = this.freebiesService.freebies;
   }
-
+  number = Math.floor(Math.random() * 4) + 1;
 }

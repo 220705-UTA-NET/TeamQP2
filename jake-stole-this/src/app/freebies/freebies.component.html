@@ -7,14 +7,18 @@
                     <img [src]="freebie.image" style="width:220px; height:140px;">
                 </div>
                 <div class="freebie-name">
-                    <h4>{{freebie.name}}</h4>
+                    <h4>
+                        <div *ngIf="freebie.name.length>29; else elseBlock">{{freebie.name.slice(0,29)}}...</div>
+                        <ng-template #elseBlock>{{freebie.name}}</ng-template>
+                    </h4>
                 </div>
                 <div class="freebie-description">
                     <p>
                         {{freebie.description.slice(0, 80)}}...</p>
                 </div>
                 <div class="details">
-                    <div class="freebie-type" [ngStyle]="{color: freebie.type === 'Free' ? 'Green' : 'Red'}">
+                    <div class="freebie-type"
+                        [ngStyle]="{color: ((freebie.type === 'FREE') || freebie.type.includes('on')) ? 'Green' : 'Red'}">
                         {{freebie.type}}
                     </div>
                 </div>
