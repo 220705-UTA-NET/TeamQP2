@@ -25,7 +25,7 @@ namespace GameReviewAPI.API.Controllers
             {
                 reviews = await _repo.GetAllReviewsAsync();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.LogError(e, e.Message);
                 return StatusCode(500);
@@ -78,11 +78,11 @@ namespace GameReviewAPI.API.Controllers
             return reviews.ToList();
         }
         [HttpPost("insertReview")]
-        public async Task<ActionResult> PostInsertReview([FromBody]Review review)
+        public async Task<ActionResult> PostInsertReview([FromBody] Review review)
         {
             try
             {
-                await _repo.PostInsertReviewAsync(review.review,review.starRating,review.userName,review.gameTitle);
+                await _repo.PostInsertReviewAsync(review.review, review.starRating, review.userName, review.gameTitle);
             }
             catch (Exception e)
             {
@@ -134,6 +134,21 @@ namespace GameReviewAPI.API.Controllers
                 return StatusCode(500);
             }
             return review;
+        }
+        [HttpGet("Discover5")]
+        public async Task<ActionResult<IEnumerable<AverageReview>>> GetTop5AverageReviews()
+        {
+            IEnumerable<AverageReview> reviews;
+            try
+            {
+                reviews = await _repo.GetTop5AverageReviewsAsync();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return reviews.ToList();
         }
     }
 }
