@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Review } from '../Review';
 import { Game } from '../Game';
+import { Rating } from '../Rating';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,9 +24,14 @@ export class ApiService {
     return this.http.get<Game[]>(url/*, game_name*/);
   }
 
-  getGameReview(): Observable<Review[]> {
+  getReviews(): Observable<Review[]> {
     const url = `${this.apiUrl}/Reviews`;
     return this.http.get<Review[]>(url/*, game_name*/);
+  }
+
+  getGameRating(game: string): Observable<Rating> {
+    const url = `${this.apiUrl}/Reviews/AverageRating?game=${game}`;
+    return this.http.get<Rating>(url/*, game_name*/);
   }
 
   deleteGameReview(review: Review): Observable<Review> {

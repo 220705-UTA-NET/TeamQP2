@@ -1,0 +1,35 @@
+<div class="review_container" *ngIf="review">
+    <!-- <div>
+        <img src="{{course.image}}" width="560" height="280">
+    </div> -->
+    <div style="align-self: center;">
+        <h1>{{ review.gameTitle }}</h1>
+        <hr>
+    </div>
+    <div class = "rating"><b>Rating: </b>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div style="display: inline;" *ngFor="let star of repeat">
+            <span class="fa fa-star checked"></span>
+            <!-- <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span> -->
+        </div>
+        <div style="display: inline;" *ngFor="let star of repeat2">
+            <span class="fa fa-star"></span>
+            <!-- <span class="fa fa-star"></span> -->
+        </div>
+        <div style="display: inline-flex; margin-left: 5px;">({{review.starRating}})</div>
+    </div>
+    <div class="green_quote">&#8216;&#8216;</div>
+    <!-- <div class = "review">{{ review.review }}</div> -->
+    <div class="review">{{ review.review }}</div>
+    <div class="green_quote_end">&#8217;&#8217;</div>
+    <div class = "user">- {{ review.userName }}</div>
+    <div class="date">{{ date }}</div>
+    <!-- <div style="margin: 0px 10px;">
+        <h2>Rating: {{game.rating}}$</h2>
+    </div>
+    <div style="margin: 20px 10px;">
+        <p>{{course.description}}</p>
+    </div> -->
+</div>

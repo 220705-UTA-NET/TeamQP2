@@ -14,6 +14,8 @@ import { GamesComponent } from './games/games.component';
 import { SearchComponent } from './search/search.component';
 import { GameComponent } from './games/game/game.component';
 import { DiscoverComponent } from './discover/discover.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { ReviewComponent } from './reviews/review/review.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
   {path: 'About', component: AboutComponent},
   {path: 'Contact', component: ContactComponent},
   {path: 'Courses', component: CoursesComponent},
-  {path: 'Course/:id', component: CourseComponent}
+  {path: 'Course/:id', component: CourseComponent},
+  {path: 'Reviews', component: ReviewsComponent}
 ]
 
 @NgModule({
@@ -40,6 +43,8 @@ const appRoutes: Routes = [
     SearchComponent,
     GameComponent,
     DiscoverComponent,
+    ReviewsComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,

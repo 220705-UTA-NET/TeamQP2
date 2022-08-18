@@ -1,7 +1,9 @@
 export interface Review {
     id?: number;
-    game: string;
     review: string;
-    favorite: boolean;
+    starRating: number;
+    userName: string;
+    gameTitle: string;
+    reviewDate: string;
   }
   
