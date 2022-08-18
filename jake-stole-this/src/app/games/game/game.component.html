@@ -23,7 +23,9 @@
         <div class = "publisher"><b>Publisher: </b>{{ game.gamePublisher }}</div>
         <div class = "year"><b>Year Published: </b>{{ game.yearPublished }}</div>
     </div>
-    <a routerLink="/ReviewGame"><button>Review Game</button></a>
+    <a routerLink="/GameReviews/{{title}}"><button>Check Reviews</button></a>
+    <!-- <button (click)="routeData()">Review Game</button> -->
+    <a routerLink="/ReviewGame" style="padding-left: 10px;"><button>Review Game</button></a>
     <!-- <div style="margin: 0px 10px;">
         <h2>Rating: {{game.rating}}$</h2>
     </div>

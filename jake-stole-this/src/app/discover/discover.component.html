@@ -3,7 +3,7 @@
     <app-game *ngIf="random_game" [game]="random_game"></app-game>
     <h1 class="heading" style="margin-top: 60px;">Top Rated</h1>
     <app-game
-        *ngFor="let game of games"
+        *ngFor="let game of top_games"
         [game]="game"
     ></app-game>
 </div>

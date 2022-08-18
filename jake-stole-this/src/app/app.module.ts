@@ -13,6 +13,7 @@ import { DiscoverComponent } from './discover/discover.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewComponent } from './reviews/review/review.component';
 import { ReviewGameComponent } from './review-game/review-game.component';
+import { GameReviewsComponent } from './game-reviews/game-reviews.component';
 import { FreebiesComponent } from './freebies/freebies.component';
 import { FreebiesService } from './Services/freebies.service';
 import { FreebieComponent } from './freebies/freebie/freebie.component';
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'Games', component: GamesComponent },
   { path: 'Reviews', component: ReviewsComponent },
   { path: 'ReviewGame', component: ReviewGameComponent },
+  { path: 'GameReviews/:name', component: GameReviewsComponent },
   { path: 'Freebies', component: FreebiesComponent },
   { path: 'Freebie/:id', component: FreebieComponent }
 ]
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     ReviewComponent,
     ReviewGameComponent,
     FreebiesComponent,
-    FreebieComponent
+    FreebieComponent,
+    GameReviewsComponent
   ],
   imports: [
     BrowserModule,
