@@ -13,13 +13,13 @@ export class ReviewGameComponent implements OnInit {
 
   games: Game[] = [];
   gameTitles: string[] = [];
-  game:Game;
-  repeat : number[];
-  repeat2 : number[];
+  game: Game;
+  repeat: number[];
+  repeat2: number[];
   review: string;
   title: string;
-  post:ReviewPost;
-  constructor(private apiService : ApiService) {  }
+  post: ReviewPost;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.repeat = new Array<number>(0);
@@ -32,17 +32,19 @@ export class ReviewGameComponent implements OnInit {
     });
   }
 
-  public uncheckedClick(i : number):void {
+  public uncheckedClick(i: number): void {
     this.repeat = new Array(this.repeat.length + i + 1);
     this.repeat2 = new Array(5 - this.repeat.length);
   }
-  public checkedClick(i : number):void {
+  public checkedClick(i: number): void {
     this.repeat = new Array(i + 1);
     this.repeat2 = new Array(5 - this.repeat.length);
   }
   public newReview() {
     //console.log("button press: " + this.title + " " + this.repeat.length + " " + this.review);
-    this.post = new ReviewPost(0, this.review, this.repeat.length, "gLance", this.title, "");
-    this.apiService.addGameReview(this.post).subscribe(response => console.log(response));
+    const post = {id: 0, review: this.review, starRating:this.repeat.length, userName:"SexyJakey", gameTitle:this.title, reviewDate:"2022-08-17T18:12:56.827"};
+    
+    this.apiService.addGameReview(JSON.stringify(post)).subscribe( response => console.log(response)
+    );
   }
 }

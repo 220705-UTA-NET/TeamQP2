@@ -11,6 +11,7 @@ export class DiscoverComponent implements OnInit {
   
   random_game: Game;
   games: Game[] = [];
+  top_games: Game[] = [];
   random : number;
 
   constructor(private apiService: ApiService) { }
@@ -24,5 +25,7 @@ export class DiscoverComponent implements OnInit {
                   this.random_game = this.games[this.random]
                   // console.log(this.random + "/" + this.games.length + ": " + this.random_game)
                 });
+    this.apiService.getTopGames().subscribe(
+                  (games) => {this.top_games = games});
   }
 }

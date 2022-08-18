@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { Game } from '../../../Game';
 import { Rating } from '../../../Rating';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -15,7 +16,7 @@ export class GameComponent implements OnInit {
   title: string;
   repeat : number[];
   repeat2 : number[];
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.game);
@@ -31,4 +32,8 @@ export class GameComponent implements OnInit {
       this.repeat2 = new Array<number>(5 - Math.round(this.rating.averageRating));
     });
   }
+  
+  // routeData() {
+  //   this.router.navigate(['/GameReviews'], { queryParams: { name : this.title }});
+  // }
 }

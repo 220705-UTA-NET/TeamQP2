@@ -13,6 +13,7 @@ import { DiscoverComponent } from './discover/discover.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewComponent } from './reviews/review/review.component';
 import { ReviewGameComponent } from './review-game/review-game.component';
+import { GameReviewsComponent } from './game-reviews/game-reviews.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   {path: 'Discover', component: DiscoverComponent},
   {path: 'Games', component: GamesComponent},
   {path: 'Reviews', component: ReviewsComponent},
-  {path: 'ReviewGame', component: ReviewGameComponent}
+  {path: 'ReviewGame', component: ReviewGameComponent},
+  {path: 'GameReviews/:name', component: GameReviewsComponent}
 ]
 
 @NgModule({
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     ReviewsComponent,
     ReviewComponent,
     ReviewGameComponent,
+    GameReviewsComponent,
   ],
   imports: [
     BrowserModule,
