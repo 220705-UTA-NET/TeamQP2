@@ -3,7 +3,6 @@ using GameReviewAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Jake saves Brandon's life
 string connectionString = builder.Configuration.GetConnectionString("connectionString");
 
 builder.Services.AddControllers();

@@ -7,6 +7,8 @@ namespace GameReviewAPI.Data
         Task<IEnumerable<Review>> GetAllReviewsAsync();
         Task<IEnumerable<AverageReview>> GetAverageReviewsDescendingAsync();
         Task<IEnumerable<AverageReview>> GetAverageReviewsAscendingAsync();
+        Task<IEnumerable<AverageReview>> GetTop5AverageReviewsAsync();
+        Task<AverageReview> GetGameAverageReviewAsync(string Title);
 
         //this one is probebaly going to be changed/removed
         Task<IEnumerable<Review>> GetReviewsByIDAsync(string id);

@@ -44,6 +44,30 @@ namespace GameReviewAPI.Data
             _logger.LogInformation("Executed GetAllReviewsAsync, returned {0} results", reviews.Count);
             return reviews;
         }
+        public async Task<AverageReview> GetGameAverageReviewAsync(string gameTitle)
+        {
+            List<AverageReview> reviews = new List<AverageReview>();
+            using SqlConnection connection = new(_connectionString);
+            await connection.OpenAsync();
+
+            string cmdText = $"SELECT ROUND(AVG(Cast(StarRating as Float)),2) AS Rating, GameTitle FROM Review.GameReview WHERE GameTitle LIKE '%{gameTitle}%' GROUP BY GameTitle";
+
+            using SqlCommand cmd = new(cmdText, connection);
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
+
+            while (reader.Read())
+            {
+                double rating = reader.GetDouble(0);
+                string GameTitle = reader.GetString(1);
+
+                AverageReview tmpReview = new AverageReview(rating, gameTitle);
+                // add a constructor for GameReview
+                reviews.Add(tmpReview);
+            }
+            await connection.CloseAsync();
+            _logger.LogInformation("Executed GetAverageReviewsDescendingAsync, returned {0} results", reviews.Count);
+            return reviews[0];
+        }
         public async Task<IEnumerable<AverageReview>> GetAverageReviewsDescendingAsync()
         {
             List<AverageReview> reviews = new List<AverageReview>();
@@ -189,6 +213,32 @@ namespace GameReviewAPI.Data
             await connection.CloseAsync();
             _logger.LogInformation("Executed GetAllReviewsForGameAsync, returned {0} results", gameReviews.Count);
             return gameReviews;
+        }
+        public async Task<IEnumerable<AverageReview>> GetTop5AverageReviewsAsync()
+        {
+            List<AverageReview> reviews = new List<AverageReview>();
+
+            using SqlConnection connection = new(_connectionString);
+            await connection.OpenAsync();
+
+            string cmdText = "SELECT TOP 5 ROUND(AVG(Cast(StarRating as Float)),2) AS Rating, GameTitle FROM Review.GameReview GROUP BY GameTitle ORDER BY Rating DESC";
+
+            using SqlCommand cmd = new(cmdText, connection);
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
+
+            while (reader.Read())
+            {
+                double rating = reader.GetDouble(0);
+                string gameTitle = reader.GetString(1);
+
+                AverageReview tmpReview = new AverageReview(rating, gameTitle);
+                // add a constructor for GameReview
+                reviews.Add(tmpReview);
+            }
+
+            await connection.CloseAsync();
+            _logger.LogInformation("Executed GetAverageReviewsDescendingAsync, returned {0} results", reviews.Count);
+            return reviews;
         }
     }
 }
