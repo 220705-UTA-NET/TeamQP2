@@ -32,3 +32,22 @@ hr {
 .checked {
     color:#00DD00;
 }
+
+button {
+    margin-top: 1%;
+    letter-spacing: 2px;
+    width: 150px;
+    height: 30px;
+    font-family: "Bahnschrift", sans-serif;
+    font-size: 16px;
+    color: white;
+    border: 1px solid lime;
+    border-radius: 8px;
+    background-color:#008000;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color:transparent;
+    border-color: white;
+  }

@@ -31,5 +31,4 @@ export class GameComponent implements OnInit {
       this.repeat2 = new Array<number>(5 - Math.round(this.rating.averageRating));
     });
   }
-
 }

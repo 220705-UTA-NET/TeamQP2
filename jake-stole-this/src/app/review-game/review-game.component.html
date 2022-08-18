@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="center">
+    <h1>Game Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label><br>
+        <select class="form-control"  id="name" required>
+          <option *ngFor="let title of gameTitles" [value]="title">{{title}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for= "rating"><b>Rating: </b><br>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div style="display: inline;" *ngFor="let star of repeat; let i = index">
+              <span class="fa fa-star checked" (click)="checkedClick(i)"></span>
+          </div>
+          <div style="display: inline;" *ngFor="let star of repeat2; let i = index">
+              <span class="fa fa-star" (click)="uncheckedClick(i)"></span>
+          </div>
+          <!-- <div style="display: inline-flex; margin-left: 5px;">({{numberRating}})</div> -->
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="review">Review</label><br>
+        <textarea class="form-control" id="review"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
