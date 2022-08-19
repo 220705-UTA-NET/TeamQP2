@@ -18,6 +18,8 @@ import { FreebiesComponent } from './freebies/freebies.component';
 import { FreebiesService } from './Services/freebies.service';
 import { FreebieComponent } from './freebies/freebie/freebie.component';
 
+import { AuthModule } from '@auth0/auth0-angular';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +52,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AuthModule.forRoot({
+      domain: 'dev-ti49ksgx.us.auth0.com',
+      clientId: 'gDNTmxX1mXzeWqvw3UC3Q7kOkoRPV7zf'
+    }),
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule
