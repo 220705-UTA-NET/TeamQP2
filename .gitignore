@@ -24,6 +24,7 @@
 */.vs/*
 */node_modules/*
 */.angular/*
+*/dist/*
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
