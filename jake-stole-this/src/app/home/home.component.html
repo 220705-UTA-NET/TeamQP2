@@ -4,7 +4,7 @@
     </div>
     <div>
         <h2>Freebies To Lookout For!</h2>
-        <ng-container *ngFor="let freebie of freebies|slice:0:3">
+        <ng-container *ngFor="let freebie of freebies | slice:0:4">
             <div class="freebie-container">
                 <div class="freebie-card">
                     <div>
@@ -12,7 +12,7 @@
                     </div>
                     <div class="freebie-name">
                         <h4>
-                            <div *ngIf="freebie.name.length>29; else elseBlock">{{freebie.name.slice(0,29)}}...</div>
+                            <div *ngIf="freebie.name.length>29; else elseBlock">{{freebie.name.slice(0, 29)}}...</div>
                             <ng-template #elseBlock>{{freebie.name}}</ng-template>
                         </h4>
                     </div>

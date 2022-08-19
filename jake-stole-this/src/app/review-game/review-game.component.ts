@@ -45,8 +45,8 @@ export class ReviewGameComponent implements OnInit {
   }
   public newReview() {
     //console.log("button press: " + this.title + " " + this.repeat.length + " " + this.review);
-    const post = {id: 0, review: this.review, starRating:this.repeat.length, userName:"Gong_Lancelot", gameTitle:this.title, reviewDate:"2022-08-17T18:12:56.827"};
-    
+    const post = { id: 0, review: this.review, starRating: this.repeat.length, userName: "Gong_Lancelot", gameTitle: this.title, reviewDate: "2022-08-17T18:12:56.827" };
+
     this.apiService.addGameReview(JSON.stringify(post)).subscribe(response => {
       console.log(response)
       this.url = "/GameReviews/" + this.title;
